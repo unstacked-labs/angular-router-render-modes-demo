@@ -3,10 +3,9 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-login',
+    imports: [],
+    template: `
     <div
       class="container flex flex-col items-center justify-center min-h-screen"
     >
@@ -19,13 +18,13 @@ import { AuthService } from '../auth.service';
       </button>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .container {
         padding: 1rem;
       }
     `,
-  ],
+    ]
 })
 export class LoginComponent {
   authService = inject(AuthService);
