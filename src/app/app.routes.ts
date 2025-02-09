@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { RenderMode, ServerRoute } from '@angular/ssr';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { redirectIfLoggedInGuard } from './redirect-if-logged-in.guard';
@@ -14,5 +15,16 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     canActivate: [redirectIfLoggedInGuard],
+  },
+];
+
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '',
+    renderMode: RenderMode.Client,
+  },
+  {
+    path: 'login',
+    renderMode: RenderMode.Server,
   },
 ];
