@@ -5,9 +5,10 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <div class="h-screen w-screen flex flex-col items-center justify-center">
+      <router-outlet />
+    </div>
+  `,
 })
-export class AppComponent {
-  title = 'angular-router-render-modes-demo';
-}
+export class AppComponent {}
