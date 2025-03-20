@@ -20,7 +20,7 @@ export const routes: Routes = [
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: '',
+    path: '**',
     renderMode: RenderMode.Client,
   },
   {
